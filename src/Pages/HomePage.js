@@ -21,9 +21,9 @@ function HomePage() {
 
 function BackgroundImage() {
   return (
-    <div className="background-image">
+    <div className="background-image ">
       <div className="overlay"></div>
-      <Container className="text-center ">
+      <Container className="text-center" >
         <h1>Bienvenue sur notre site</h1>
         <h2>Découvrez ce que nous avons à offrir</h2>
       </Container>
@@ -33,7 +33,7 @@ function BackgroundImage() {
 
 function AboutSection() {
   const [profile, setProfile] = useState(null);
-  const apiUrl = 'https://api.github.com/users/github-john-doe'; // URL du profil GitHub de John Doe
+  const apiUrl = 'https://api.github.com/users/github-john-doe'; 
 
   useEffect(() => {
     fetch(apiUrl)

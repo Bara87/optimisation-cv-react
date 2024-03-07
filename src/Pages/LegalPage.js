@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 
 function LegalPage() {
-  // Définir l'état initial pour les informations sur l'éditeur, l'hébergeur et les crédits
+
   const [editorInfo, setEditorInfo] = useState({
     name: "John Doe",
     address: "Adresse de l'éditeur",
