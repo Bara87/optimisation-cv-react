@@ -21,9 +21,9 @@ function HomePage() {
 
 function BackgroundImage() {
   return (
-    <div className="background-image ">
+    <div className="background-image d-flex align-items-center justify-content-center ">
       <div className="overlay"></div>
-      <Container className="text-center" >
+      <Container className="text-center" style={{ color: 'white' }}  >
         <h1>Bienvenue sur notre site</h1>
         <h2>Découvrez ce que nous avons à offrir</h2>
       </Container>
@@ -68,7 +68,7 @@ function ProfileInfo({ profile }) {
       <p>Nom d'utilisateur : {profile.login}</p>
       <p>Bio : {profile.bio}</p>
       <img src={profile.avatar_url} alt="Avatar de John Doe" style={{ width: '100px', borderRadius: '50%' }} />
-      {/* Ajoutez les compétences sous forme de progress bars Bootstrap */}
+      
       <h3>Compétences :</h3>
       {skills.map((skill, index) => (
         <div key={index} className="mb-3">
