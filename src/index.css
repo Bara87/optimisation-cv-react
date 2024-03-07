@@ -12,8 +12,8 @@ code {
     monospace;
 }
 .nav-link {
-  color: blue; /* Couleur par défaut du texte */
-  transition: color 0.3s ease-in-out; /* Animation de transition fluide */
+  color: blue;
+  transition: color 0.3s ease-in-out;
   font-size: 20px;
   font-weight: bold;
 }
@@ -23,20 +23,20 @@ code {
   font-weight: bold;
 }
 
-/* Styles au survol d'un lien */
+
 .nav-link:hover {
-  color: rgba(255, 255, 255, 0.8); /* Couleur blanche avec une transparence de 0.8 */
+  color: rgba(255, 255, 255, 0.8); 
 }
 .back-to-top:hover {
-  background-color: #298eff; /* Couleur de fond au survol */
+  background-color: #298eff;
 }
 
-/* Partie HomePage*/
+
 .background-image {
   background-image: url('/public/images/banner.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh; /* Hauteur de l'image de fond en pleine page */
+  height: 100vh; 
   position: relative;
 }
 .mt-3 {
@@ -49,17 +49,17 @@ code {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); /* Fond de couleur noire semi-transparent */
+  background-color: rgba(0, 0, 0, 0.3); 
 }
 
-/* Partie ServicesPage */
+
 .py-5 {
   margin-top: 40px;
 }
 
 .image-article {
-  width: 100%; /* ou une largeur fixe en pixels ou en pourcentage */
-  height: auto; /* Pour conserver le ratio hauteur/largeur */
+  width: 100%;
+  height: auto; 
 }
 
 .mb-4 {
