@@ -6,7 +6,6 @@ import PortfolioPage from "./Pages/PortfolioPage";
 import BlogPage from "./Pages/BlogPage";
 import ContactPage from "./Pages/ContactPage";
 import LegalPage from "./Pages/LegalPage";
-import AproposPage from "./Pages/AproposPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import './index.css';
@@ -17,7 +16,7 @@ function App() {
     <div>
       <Header />
       <Routes>
-        <Route path="/apropos" element={<AproposPage />} />
+        
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
