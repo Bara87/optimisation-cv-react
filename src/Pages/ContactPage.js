@@ -41,10 +41,10 @@ function ContactPage() {
       }}
     >
       
-      <Container className="py-5 container-background" style={{marginTop:20}}>
+      <Container className="py-5 container-background" >
       <img src="./images/contact-bg.jpg" alt="Logo" style={{ height: '200px', width: '100%', objectFit: 'cover' }} />
 
-        <h1 className="text-center text-white mb-4">Contactez-nous</h1>
+        <h1 className="text-center text-black mb-4">Contactez-nous</h1>
 
         <Row className="align-items-center">
      
@@ -126,7 +126,7 @@ function ContactPage() {
               <p>Adresse : Place de la République, Paris</p>
               <p>Téléphone : +337 09 00 45 89</p>
               
-              <GooglemapsPage lat={48.8566} lng={2.3522} />
+              <GooglemapsPage lat={48.867202} lng={2.363613} />
             </div>
           </Col>
         </Row>

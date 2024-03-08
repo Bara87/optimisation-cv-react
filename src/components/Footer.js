@@ -4,6 +4,7 @@ import { Button } from 'react-bootstrap';
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+
 function Footer() {
   const [showBackToTop, setShowBackToTop] = useState(false);
 
@@ -27,14 +28,16 @@ function Footer() {
   };
 
   return (
-    <footer className="bg-light py-4">
-      <Container>
+    <footer className="py-4">
+      <Container className="footer-container">
         <Row>
           <Col md={3}>
-            <div>
-              <h5>John Doe</h5>
-              <p>Adresse</p>
-              <p>Numéro de téléphone</p>
+            <div className="footer-address">
+              <h5 >John Doe</h5>
+              <p>Adresse : Place de la République</p>
+              <p>Code postale : 75011</p>
+              <p>Ville : Paris</p>
+              <p>Téléphone : +337 09 00 45 89</p>
               <div>
                 <a
                   href="https://github.com/johndoe"
@@ -63,18 +66,18 @@ function Footer() {
           <Col md={3}>
             <div>
               <h5>Pages</h5>
-              <ul>
+              <ul className="footer-list">
                 <li>
-                  <Link to="/">Accueil</Link>
+                  <Link to="/" className="black-link">Accueil</Link>
                 </li>
                 <li>
-                  <Link to="/services">Services</Link>
+                  <Link to="/services" className="black-link">Services</Link>
                 </li>
                 <li>
-                  <Link to="/contact">Contact</Link>
+                  <Link to="/contact" className="black-link">Contact</Link>
                 </li>
                 <li>
-                  <Link to="/legal">Mentions legales</Link>
+                  <Link to="/legal" className="black-link">Mentions legales</Link>
                 </li>
               </ul>
             </div>
@@ -82,9 +85,9 @@ function Footer() {
           <Col md={3}>
             <div>
               <h5>Dernières réalisations</h5>
-              <ul>
+              <ul class="footer-list">
                 <li>
-                  <Link to="/portfolio">Portfolio</Link>
+                  <Link to="/portfolio" className="black-link">Portfolio</Link>
                 </li>
               </ul>
             </div>
@@ -92,19 +95,19 @@ function Footer() {
           <Col md={3}>
             <div>
               <h5>Derniers articles</h5>
-              <ul>
+              <ul className="footer-list">
                 <li>
-                  <Link to="/blog">Blog</Link>
+                  <Link to="/blog" className="black-link">Blog</Link>
                 </li>
               </ul>
             </div>
           </Col>
         </Row>
         <Row className="mt-4">
-          <Col>
-            <p className="text-center">
+          <Col style={{ textAlign: 'center' }}>
+            <strong >
               &copy; 2024 John Doe. Tous droits réservés.
-            </p>
+            </strong>
           </Col>
         </Row>
         <Row className="mt-2">
