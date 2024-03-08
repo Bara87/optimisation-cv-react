@@ -7,7 +7,7 @@ function Header() {
   return (
     <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
       <Container>
-        <Navbar.Brand className="my-logo">Logo du site</Navbar.Brand>
+        <Navbar.Brand className="my-logo">John Doe</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="justify-items-center">

@@ -51,7 +51,7 @@ const BlogPage = () => {
   const [articles] = useState(initialArticles.slice(0, 6));
 
   return (
-    <Container className="py-5 container-background">
+    <Container className="py-5 container-background" >
     <h1 className="text-center mb-4">Blog</h1>
     <Row>
       {articles.map((article, index) => (
