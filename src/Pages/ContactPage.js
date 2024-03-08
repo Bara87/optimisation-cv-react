@@ -5,11 +5,10 @@ import GooglemapsPage from "./GooglemapsPage";
 
 function ContactPage() {
 
-  // Coordonnées de latitude et de longitude
-  const latitude = 48.8566; // Exemple: Paris
-  const longitude = 2.3522; // Exemple: Paris
+ 
+  const latitude = 48.8566;
+  const longitude = 2.3522; 
 
-  // Utilisation de useState pour gérer l'état des champs du formulaire
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,13 +19,13 @@ function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Logique pour traiter le formulaire de contact ici
+  
     console.log(formData);
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    // Mise à jour de l'état avec les valeurs des champs du formulaire
+   
     setFormData({
       ...formData,
       [name]: value,
@@ -42,13 +41,13 @@ function ContactPage() {
       }}
     >
       
-      <Container className="py-5" style={{marginTop:20}}>
+      <Container className="py-5 container-background" style={{marginTop:20}}>
       <img src="./images/contact-bg.jpg" alt="Logo" style={{ height: '200px', width: '100%', objectFit: 'cover' }} />
 
         <h1 className="text-center text-white mb-4">Contactez-nous</h1>
 
         <Row className="align-items-center">
-          {/* Colonne pour le formulaire de contact */}
+     
           <Col md={6}>
             <Form onSubmit={handleSubmit}>
               <Form.Group controlId="formName">
@@ -118,7 +117,7 @@ function ContactPage() {
             </Form>
           </Col>
 
-          {/* Colonne pour les coordonnées */}
+        
           <Col md={6}>
             <div className="mt-5">
               <h3>Coordonnées</h3>
@@ -126,7 +125,7 @@ function ContactPage() {
               <p>Nom : Doe</p>
               <p>Adresse : Place de la République, Paris</p>
               <p>Téléphone : +337 09 00 45 89</p>
-              {/* Intégration de la carte Google Maps */}
+              
               <GooglemapsPage lat={48.8566} lng={2.3522} />
             </div>
           </Col>

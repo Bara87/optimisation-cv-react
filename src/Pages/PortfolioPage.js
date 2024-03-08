@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container, Card, Row, Col } from "react-bootstrap";
 
 function PortfolioPage() {
-  // Utilisation de useState pour gérer l'état des projets
+
   const [projects, setProjects] = useState([
     {
       title: "Projet 1",
@@ -25,7 +25,7 @@ function PortfolioPage() {
   ]);
 
   return (
-    <Container className="py-5">
+    <Container className="py-5 container-background">
       <h1 className="text-center mb-4">Nos Réalisations</h1>
       
       <Row>
