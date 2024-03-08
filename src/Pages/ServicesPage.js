@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container, Card, Row, Col } from "react-bootstrap";
 
 function ServicesPage() {
-  // Utilisation de useState pour gérer l'état des services
+ 
   const [services, setServices] = useState([
     {
       title: "Service 1",

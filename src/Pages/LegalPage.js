@@ -21,7 +21,7 @@ function LegalPage() {
   });
 
   return (
-    <Container className="py-5">
+    <Container className="py-5 container-background">
       <h1 className="mb-4 text-center">Mentions Légales</h1>
       <p>Les présentes mentions légales régissent l'utilisation de ce site web et énoncent les conditions générales d'utilisation des services proposés. En accédant à ce site et en utilisant ses services, vous acceptez ces conditions dans leur intégralité. Nous vous recommandons de lire attentivement ces mentions légales avant d'utiliser ce site. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser ce site</p>
       <div>
