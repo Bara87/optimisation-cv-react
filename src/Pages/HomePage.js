@@ -5,8 +5,8 @@ function HomePage() {
   return (
     <div className="homepage text-center">
       <BackgroundImage />
-      <div className='py-5' style={{ marginBottom: '40px'}}>
-        <Container className="py-5" style={{ backgroundColor: 'white' }}>
+      <div className='py-5' style={{backgroundColor: 'white'}}>
+        <Container className="py-5 shadow" style={{ backgroundColor: 'white', marginBottom: '50px' }}>
           <Row>
             <Col md={6}>
               <AboutMe />
@@ -26,8 +26,8 @@ function BackgroundImage() {
     <div className="background-image d-flex align-items-center justify-content-center">
       <div className="overlay"></div>
       <Container className="text-center" style={{ color: 'white' }}>
-        <h1 style={{ color: 'white' }}>Bienvenue sur notre site</h1>
-        <h2 style={{ color: 'white' }}>Découvrez ce que nous avons à offrir</h2>
+        <h1 style={{ color: 'white' }}>Bonjour, je suis John Doe</h1>
+        <h2 style={{ color: 'white' }}>Développeur web full stack</h2>
         <Button variant="primary" style={{ marginTop: '20px' }}>En savoir plus</Button>
       </Container>
     </div>

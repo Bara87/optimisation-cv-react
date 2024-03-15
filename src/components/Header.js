@@ -18,16 +18,13 @@ function Header() {
               Services
             </Nav.Link>
             <Nav.Link as={Link} to="/portfolio" activeClassName="active" className="nav-link">
-              Portfolio
+              Réalisations
             </Nav.Link>
             <Nav.Link as={Link} to="/blog" activeClassName="active" className="nav-link">
               Blog
             </Nav.Link>
             <Nav.Link as={Link} to="/contact" activeClassName="active" className="nav-link">
-              Contact
-            </Nav.Link>
-            <Nav.Link as={Link} to="/legal" activeClassName="active" className="nav-link">
-              Mentions légales
+              Me Contacter
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
