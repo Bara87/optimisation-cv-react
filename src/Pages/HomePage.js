@@ -1,83 +1,70 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Button, ProgressBar } from 'react-bootstrap';
+import React from 'react';
+import { Container, Row, Col, ProgressBar, Button } from 'react-bootstrap';
 
 function HomePage() {
-  const [showAboutSection, setShowAboutSection] = useState(false);
-
-  const handleClick = () => {
-    setShowAboutSection(!showAboutSection);
-  };
-
   return (
     <div className="homepage text-center">
       <BackgroundImage />
-      <Button variant="primary" onClick={handleClick} className="mt-3">
-        {showAboutSection ? 'Masquer' : 'En savoir plus'}
-      </Button>
-      {showAboutSection && <AboutSection />}
+      <div className='py-5' style={{ marginBottom: '40px'}}>
+        <Container className="py-5" style={{ backgroundColor: 'white' }}>
+          <Row>
+            <Col md={6}>
+              <AboutMe />
+            </Col>
+            <Col md={6}>
+              <Skills />
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </div>
   );
 }
 
 function BackgroundImage() {
   return (
-    <div className="background-image d-flex align-items-center justify-content-center ">
+    <div className="background-image d-flex align-items-center justify-content-center">
       <div className="overlay"></div>
-      <Container className="text-center" style={{ color: 'white' }}  >
-        <h1>Bienvenue sur notre site</h1>
-        <h2>Découvrez ce que nous avons à offrir</h2>
+      <Container className="text-center" style={{ color: 'white' }}>
+        <h1 style={{ color: 'white' }}>Bienvenue sur notre site</h1>
+        <h2 style={{ color: 'white' }}>Découvrez ce que nous avons à offrir</h2>
+        <Button variant="primary" style={{ marginTop: '20px' }}>En savoir plus</Button>
       </Container>
     </div>
   );
 }
 
-function AboutSection() {
-  const [profile, setProfile] = useState(null);
-  const apiUrl = 'https://api.github.com/users/github-john-doe'; 
-
-  useEffect(() => {
-    fetch(apiUrl)
-      .then(response => response.json())
-      .then(data => setProfile(data))
-      .catch(error => console.error('Erreur lors de la récupération des données du profil GitHub:', error));
-  }, []);
-
+function AboutMe() {
   return (
-    <Container id="about" className="py-5">
-      <h2>À propos de John Doe</h2>
-      {profile ? (
-        <ProfileInfo profile={profile} />
-      ) : (
-        <p>Chargement...</p>
-      )}
-    </Container>
+    <div style={{ textAlign: 'left'}}>
+      <h3 style={{ borderBottom: '2px solid blue', paddingBottom: '10px', marginBottom: '30px'}}>À propos</h3>
+      <p>Je m'appelle Bara DIA, je suis actuellement une formation en ligne
+en developpeur web et web mobile full stack, délivrée par le CEF(Centre Européenne de Formation). C'est dans le cadre de cette formation que je dois réaliser ce projet de PORTFOLIO ou vous aurez la possiblité mes chèrs visiteurs de pouvoir voir mes premières réalisations en tant que nouveau développeur. Cette formation complet et progressif, incluant les technologies prisées par les recruteurs, le tout débouchant sur le Titre Professionnel Développeur Web et Web Mobile(DWWM – RNCP37674) de niveau 5 (équivalent à un Bac+2). Je suis détenteur d’un DUT en Génie Mécanique et Productique mais, ces dernières années j’ai travaillé en hôtellerie au poste de réceptionniste. J’ai choisi de me spécialiser dans ce nouveau métier après avoir étudié et analysé l’évolution du marché du travail et les métiers d’avenirs. Ce qui m’a le plus attiré dans ce metier de développeur, c’est le fait qu’il soit un domaine évolutif, créatif avec toujours de nouveautés à découvrir. J’ai un esprit curieux et créatif, avec une bonne maitrise de la programmation, j’aurais toutes mes chances de faire mes preuves dans ce métier et de relever de nouveaux défis.</p>
+    </div>
   );
 }
 
-function ProfileInfo({ profile }) {
-  // Définition des compétences avec leurs valeurs
+function Skills() {
   const skills = [
-    { name: "HTML", value: 80 },
-    { name: "CSS", value: 75 },
-    { name: "JavaScript", value: 70 },
-    { name: "React", value: 85 },
+    { name: "HTML", value: 90, color: '#61DAFB'},
+    { name: "CSS", value: 80, color: '#00A3E0' },
+    { name: "JAVASCRIPT", value: 70, color: '#F7DF1E'  },
+    { name: "PHP", value: 60, color: '#8892BF' },
+    { name: "REACT", value: 50, color: '#61DAFB' },
   ];
 
   return (
-    <div>
-      <p>Nom d'utilisateur : {profile.login}</p>
-      <p>Bio : {profile.bio}</p>
-      <img src={profile.avatar_url} alt="Avatar de John Doe" style={{ width: '100px', borderRadius: '50%' }} />
-      
-      <h3>Compétences :</h3>
+    <div style={{ textAlign: 'left' }}>
+      <img src='./images/john-doe-about.jpg' alt="Votre photo" style={{ width: '100%'}} />
+      <h4 style={{ marginTop: '10px'}}>Mes Compétences</h4>
       {skills.map((skill, index) => (
         <div key={index} className="mb-3">
           <p>{skill.name}</p>
-          <ProgressBar now={skill.value} label={`${skill.value}%`} />
+          <ProgressBar now={skill.value} label={`${skill.value}%`} variant={skill.color} />
         </div>
       ))}
     </div>
   );
 }
 
-export default HomePage;
+export default HomePage; 
