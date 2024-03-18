@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
 import GooglemapsPage from "./GooglemapsPage";
+import { FaPhone, FaMapMarkerAlt  } from 'react-icons/fa';
 
 
 function ContactPage() {
 
  
-  const latitude = 48.8566;
-  const longitude = 2.3522; 
+  const latitude = 45.778460;
+  const longitude = 4.799010; 
 
   const [formData, setFormData] = useState({
     name: "",
@@ -33,22 +34,13 @@ function ContactPage() {
   };
 
   return (
-    <div
-      className="contact-page"
-      style={{ position: 'relative',
-        backgroundImage:
-          "linear-gradient(rgba(0, 105, 255, 0.5), rgba(0, 105, 255, 0.5))",
-      }}
-    >
-      
-      <Container className="py-5 container-background" >
-      <img src="./images/contact-bg.jpg" alt="Logo" style={{ height: '200px', width: '100%', objectFit: 'cover' }} />
-
-        <h1 className="text-center text-black mb-4">Contactez-nous</h1>
-
-        <Row className="align-items-center">
-     
-          <Col md={6}>
+    <div className="contact-page" style={{ padding: '50px'}}>
+      <Container className="py-5 container-background" style={{backgroundColor:'white'}}>
+        <h1 className="text-center text-black mb-4">ME CONTACTER</h1>
+        <p className="text-center">Pour me contacter en vue d'un entretien ou d'une future collabartion, merci de remplir le formulaire de contact.</p>
+        <Row className="justify-content-md-center d-flex align-items-start">     
+          <Col md={5} >
+            <h3 style={{ borderBottom: '2px solid blue'}}>Formulaire de contact</h3>
             <Form onSubmit={handleSubmit}>
               <Form.Group controlId="formName">
                 <Form.Label>Nom</Form.Label>
@@ -110,21 +102,24 @@ function ContactPage() {
                   required
                 />
               </Form.Group>
-
-              <Button variant="primary" type="submit">
+              <div className="text-center">   
+              <Button variant="primary" type="submit" style={{marginTop:'20px'}}>
                 Envoyer
               </Button>
+              </div>
             </Form>
           </Col>
 
         
-          <Col md={6}>
-            <div className="mt-5">
-              <h3>Coordonnées</h3>
-              <p>Prénom : John</p>
-              <p>Nom : Doe</p>
-              <p>Adresse : Place de la République, Paris</p>
-              <p>Téléphone : +337 09 00 45 89</p>
+          <Col md={5} >
+            <div >
+              <h3 style={{ borderBottom: '2px solid blue'}}>Mes coordonnées</h3>
+              <p>
+                <FaMapMarkerAlt style={{ marginRight: '5px' }} />
+                40 Rue Laure Diebold, Lyon</p>
+              <p>
+               <FaPhone style={{marginRight: '5px'}} />
+                07 09 00 45 89</p>
               
               <GooglemapsPage lat={48.867202} lng={2.363613} />
             </div>

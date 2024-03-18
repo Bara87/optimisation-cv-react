@@ -1,73 +1,73 @@
+
 import React, { useState } from "react";
-import { Container, Card, Row, Col } from "react-bootstrap";
+import { Container, Card, Row, Col, Button } from "react-bootstrap";
 
 const BlogPage = () => {
   const initialArticles = [
     {
-      title: "Titre de l'article 1",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nisi auctor, fermentum arcu et, aliquet magna. Proin ultricies sit amet ipsum sed posuere. Donec vitae leo est. Suspendisse non eros eu nibh mollis pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus",
-      date: "1er Janvier 2024",
-      author: "John Doe",
+      title: "Coder son site en HTML/CSS",
+      content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      date: "Publié 22 mars 2022",
       image: "./images/coder.jpg",
+      wordpressUrl: "https://wordpress.com/fr/",
     },
     {
-      title: "Titre de l'article 1",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nisi auctor, fermentum arcu et, aliquet magna. Proin ultricies sit amet ipsum sed posuere. Donec vitae leo est. Suspendisse non eros eu nibh mollis pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus",
-      date: "1er Janvier 2024",
-      author: "John Doe",
+      title: "Vendre ses produits sur le Web",
+      content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      date: "Publié 20 mars 2022",
       image: "./images/croissance.jpg",
+      wordpressUrl: "https://wordpress.com/fr/",
     },
     {
-      title: "Titre de l'article 1",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nisi auctor, fermentum arcu et, aliquet magna. Proin ultricies sit amet ipsum sed posuere. Donec vitae leo est. Suspendisse non eros eu nibh mollis pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus",
-      date: "1er Janvier 2024",
-      author: "John Doe",
+      title: "Se positionner sur Google",
+      content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      date: "Publié 01 mars 2022",
       image: "./images/google.jpg",
+      wordpressUrl: "https://wordpress.com/fr/",
     },
     {
-      title: "Titre de l'article 1",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nisi auctor, fermentum arcu et, aliquet magna. Proin ultricies sit amet ipsum sed posuere. Donec vitae leo est. Suspendisse non eros eu nibh mollis pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus",
-      date: "1er Janvier 2024",
-      author: "John Doe",
+      title: "Coder en responsive design",
+      content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      date: "Publié 29 février 2022",
       image: "./images/screens.jpg",
+      wordpressUrl: "https://wordpress.com/fr/",
     },
     {
-      title: "Titre de l'article 1",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nisi auctor, fermentum arcu et, aliquet magna. Proin ultricies sit amet ipsum sed posuere. Donec vitae leo est. Suspendisse non eros eu nibh mollis pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus",
-      date: "1er Janvier 2024",
-      author: "John Doe",
+      title: "Techniques de référencement",
+      content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      date: "Publié 28 février 2022",
       image: "./images/seo.jpg",
+      wordpressUrl: "https://wordpress.com/fr/",
     },
     {
-      title: "Titre de l'article 1",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nisi auctor, fermentum arcu et, aliquet magna. Proin ultricies sit amet ipsum sed posuere. Donec vitae leo est. Suspendisse non eros eu nibh mollis pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus",
-      date: "1er Janvier 2024",
-      author: "John Doe",
+      title: "Apprendre à coder",
+      content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      date: "Publié 12 février 2022",
       image: "./images/technos.png",
+      wordpressUrl: "https://wordpress.com/fr/",
     },
-    // Ajoutez d'autres articles ici
+    
   ];
 
   const [articles] = useState(initialArticles.slice(0, 6));
 
   return (
-    <Container className="py-5 container-background" >
+    <Container className="py-5" style={{backgroundColor:'white'}} >
     <h1 className="text-center mb-4">Blog</h1>
-    <Row>
+    <p className="text-center">Retrouvez ici quelques artciles sur le développement web</p>
+    <Row className="justify-content-md-center">
       {articles.map((article, index) => (
-        <Col key={index} md={4} className="mb-4">
+        <Col key={index} md={4} className="mb-3">
           <Card>
           <Card.Body>
-  <Card.Title>{article.title}</Card.Title>
-  <Card.Subtitle className="mb-2 text-muted">
-    {article.date}
-  </Card.Subtitle>
-  {article.image && <img src={article.image} alt={`Image de ${article.title}`} className="img-fluid image-article mb-3" />}
-  <Card.Text>{article.content}</Card.Text>
-  <Card.Footer className="text-muted">
-    Auteur : {article.author}
-  </Card.Footer>
-</Card.Body>
+            {article.image && <img src={article.image} alt={`Image de ${article.title}`} className="img-fluid image-article mb-3" />}
+            <Card.Title>{article.title}</Card.Title>
+            <Card.Text>{article.content}</Card.Text>
+            <Button style={{ margin: '15px'}}><a href={article.wordpressUrl} target="_blank" rel="noopener noreferrer" className="text-center" style={{color:'white'}}>Lire la suite</a></Button>
+            <Card.Footer className="text-muted">
+              {article.date}
+            </Card.Footer>
+         </Card.Body>
           </Card>
         </Col>
       ))}
