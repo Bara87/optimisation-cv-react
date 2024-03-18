@@ -1,44 +1,43 @@
 import React, { useState } from "react";
 import { Container, Card, Row, Col } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDesktop, faCode, faChartLine } from "@fortawesome/free-solid-svg-icons";
 
 function ServicesPage() {
  
   const [services, setServices] = useState([
     {
-      title: "Service 1",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nisi auctor, fermentum arcu et, aliquet magna. Proin ultricies sit amet ipsum sed posuere. Donec vitae leo est. Suspendisse non eros eu nibh mollis pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam lacinia vehicula mi quis efficitur.",
+      title: "UX DESIGN",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nisi auctor, fermentum arcu et, aliquet magna.",
+      icon: faDesktop,
     },
     {
-      title: "Service 2",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nisi auctor, fermentum arcu et, aliquet magna. Proin ultricies sit amet ipsum sed posuere. Donec vitae leo est. Suspendisse non eros eu nibh mollis pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam lacinia vehicula mi quis efficitur.",
+      title: "DEVELOPPEMENT WEB",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nisi auctor, fermentum arcu et, aliquet magna.",
+      icon: faCode,
     },
     {
-      title: "Service 3",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nisi auctor, fermentum arcu et, aliquet magna. Proin ultricies sit amet ipsum sed posuere. Donec vitae leo est. Suspendisse non eros eu nibh mollis pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam lacinia vehicula mi quis efficitur.",
+      title: "REFERENCEMENT",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nisi auctor, fermentum arcu et, aliquet magna.",
+      icon: faChartLine,
     },
-    {
-      title: "Service 4",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nisi auctor, fermentum arcu et, aliquet magna. Proin ultricies sit amet ipsum sed posuere. Donec vitae leo est. Suspendisse non eros eu nibh mollis pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam lacinia vehicula mi quis efficitur.",
-    },
-    {
-      title: "Service 5",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nisi auctor, fermentum arcu et, aliquet magna. Proin ultricies sit amet ipsum sed posuere. Donec vitae leo est. Suspendisse non eros eu nibh mollis pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam lacinia vehicula mi quis efficitur.",
-    },
-    {
-      title: "Service 6",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nisi auctor, fermentum arcu et, aliquet magna. Proin ultricies sit amet ipsum sed posuere. Donec vitae leo est. Suspendisse non eros eu nibh mollis pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam lacinia vehicula mi quis efficitur.",
-    },
+    
   ]);
 
+
+  const updatedServices = services.slice(0, 3);
+
   return (
-    <Container className="py-5 container-background">
-      <h1 className="text-center mb-4">Nos Services</h1>
+    <Container fluid className="py-5 container-background" style={{ backgroundColor: 'white'}}>
+      <h1 className="text-center mb-4">MON OFFRE DE SERVICES</h1>
+      <p className="text-center">Voici les prestations sur lesquelles je peux intervenir</p>
       
-      <Row>
-        {services.map((service, index) => (
-          <Col key={index} md={4} className="mb-4">
-            <Card>
-              <Card.Body>
+      <Row className="justify-content-md-center" >
+        {updatedServices.map((service, index) => (
+          <Col key={index} md={3} className="mb-3">
+            <Card className="text-center">
+              <Card.Body className="shadow">
+                <FontAwesomeIcon icon={service.icon} size="3x" className="mb-4 text-primary" /> 
                 <Card.Title>{service.title}</Card.Title>
                 <Card.Text>{service.description}</Card.Text>
               </Card.Body>

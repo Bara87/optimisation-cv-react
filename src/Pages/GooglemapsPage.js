@@ -39,7 +39,7 @@ function GoogleMapsComponent({ lat, lng }) {
     };
   }, [lat, lng]);
 
-  return <div id="map" style={{ height: "400px" }}></div>; // Div pour afficher la carte
+  return <div id="map" style={{ height: "400px" }}></div>; 
 }
 
 export default GoogleMapsComponent;

@@ -13,7 +13,7 @@ import './index.css';
 
 function App() {
   return (
-    <div>
+    <div className="AppContainer" style={{height: 'auto'}}>
       <Header />
       <Routes>
         
@@ -29,4 +29,3 @@ function App() {
     </div>  )
 };
 export default App;
-

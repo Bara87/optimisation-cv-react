@@ -5,7 +5,7 @@ function HomePage() {
   return (
     <div className="homepage text-center">
       <BackgroundImage />
-      <div className='py-5' style={{backgroundColor: 'white'}}>
+      <div className='py-5' style={{backgroundColor: 'white'}} >
         <Container className="py-5 shadow" style={{ backgroundColor: 'white', marginBottom: '50px' }}>
           <Row>
             <Col md={6}>
@@ -38,9 +38,12 @@ function AboutMe() {
   return (
     <div style={{ textAlign: 'left'}}>
       <h3 style={{ borderBottom: '2px solid blue', paddingBottom: '10px', marginBottom: '30px'}}>À propos</h3>
-      <p>Je m'appelle Bara DIA, je suis actuellement une formation en ligne
-en developpeur web et web mobile full stack, délivrée par le CEF(Centre Européenne de Formation). C'est dans le cadre de cette formation que je dois réaliser ce projet de PORTFOLIO ou vous aurez la possiblité mes chèrs visiteurs de pouvoir voir mes premières réalisations en tant que nouveau développeur. Cette formation complet et progressif, incluant les technologies prisées par les recruteurs, le tout débouchant sur le Titre Professionnel Développeur Web et Web Mobile(DWWM – RNCP37674) de niveau 5 (équivalent à un Bac+2). Je suis détenteur d’un DUT en Génie Mécanique et Productique mais, ces dernières années j’ai travaillé en hôtellerie au poste de réceptionniste. J’ai choisi de me spécialiser dans ce nouveau métier après avoir étudié et analysé l’évolution du marché du travail et les métiers d’avenirs. Ce qui m’a le plus attiré dans ce metier de développeur, c’est le fait qu’il soit un domaine évolutif, créatif avec toujours de nouveautés à découvrir. J’ai un esprit curieux et créatif, avec une bonne maitrise de la programmation, j’aurais toutes mes chances de faire mes preuves dans ce métier et de relever de nouveaux défis.</p>
-    </div>
+      <p>Je m'appelle John Doe, je suis actuellement une formation en ligne
+         en developpeur web et web mobile full stack, délivrée par le CEF(Centre Européenne de Formation).
+         C'est dans le cadre de cette formation que je dois réaliser ce site ou vous aurez la possiblité de 
+         pouvoir voir mes premières réalisations en tant que nouveau développeur. Cette formation complet et progressif, 
+         incluant les technologies prisées par les recruteurs, le tout débouchant sur le Titre Professionnel 
+         Développeur Web et Web Mobile(DWWM – RNCP37674) de niveau 5 (équivalent à un Bac+2).    </p> </div>
   );
 }
 
