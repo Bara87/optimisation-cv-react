@@ -34,7 +34,8 @@ function ContactPage() {
   };
 
   return (
-    <div className="contact-page" style={{ padding: '50px'}}>
+    <div className="contact-page " style={{ padding: '50px', position: 'relative'}}>
+      <div className="overlay"></div>
       <Container className="py-5 container-background" style={{backgroundColor:'white'}}>
         <h1 className="text-center text-black mb-4">ME CONTACTER</h1>
         <p className="text-center">Pour me contacter en vue d'un entretien ou d'une future collabartion, merci de remplir le formulaire de contact.</p>

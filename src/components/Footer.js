@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer  style={{paddingBottom:'15px'}}>
+    <footer style={{paddingBottom:'15px', position: 'relative'}}>
+      <div className="overlay"></div>
       <Container className="footer-container" style={{margin: '15px'}}>
         <Row>
           <Col md={3}>
@@ -19,7 +20,7 @@ function Footer() {
                   <a
                     href="https://github.com/johndoe"
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="nofollow"
                   >
                     <FaGithub />
                   </a>
@@ -28,7 +29,7 @@ function Footer() {
                   <a
                     href="https://twitter.com/johndoe"
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="nofollow"
                   >
                     <FaTwitter />
                   </a>
@@ -37,7 +38,7 @@ function Footer() {
                   <a
                     href="https://www.linkedin.com/in/johndoe/"
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="nofollow"
                   >
                     <FaLinkedin />
                   </a>

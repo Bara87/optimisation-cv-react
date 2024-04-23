@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-
 function Header() {
+
+  const [expanded, setExpanded] = useState(false);
+
+  const handleNavClose = () => setExpanded(false);
+
   return (
-    <Navbar bg="dark" variant="dark"  expand="lg" style={{width: '100%'}}>
+    <Navbar bg="dark" variant="dark" expand="lg" style={{ width: '100%' }}>
       <Container>
-        <Navbar.Brand className="my-logo" style={{marginLeft:'20px'}}>John Doe</Navbar.Brand>
+        <Link to="/" className="navbar-brand my-logo" style={{ marginLeft: '20px' }}>
+          John Doe
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-          <Nav className="justify-items-center" style={{marginRight: '30px'}}>
+          <Nav className="justify-items-center" style={{ marginRight: '30px' }}>
             <Nav.Link as={Link} to="/" activeClassName="active" exact className="nav-link">
               Accueil
             </Nav.Link>

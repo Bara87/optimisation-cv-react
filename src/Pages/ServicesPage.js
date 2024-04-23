@@ -37,7 +37,7 @@ function ServicesPage() {
           <Col key={index} md={3} className="mb-3">
             <Card className="text-center">
               <Card.Body className="shadow">
-                <FontAwesomeIcon icon={service.icon} size="3x" className="mb-4 text-primary" /> 
+                <FontAwesomeIcon icon={service.icon} size="3x" className="mb-4 text-primary icon-hover" /> 
                 <Card.Title>{service.title}</Card.Title>
                 <Card.Text>{service.description}</Card.Text>
               </Card.Body>
