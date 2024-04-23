@@ -59,15 +59,15 @@ const BlogPage = () => {
       {articles.map((article, index) => (
         <Col key={index} md={4} className="mb-3">
           <Card>
-          <Card.Body>
-            {article.image && <img src={article.image} alt={`Image de ${article.title}`} className="img-fluid image-article mb-3" />}
-            <Card.Title>{article.title}</Card.Title>
-            <Card.Text>{article.content}</Card.Text>
-            <Button style={{ margin: '15px'}}><a href={article.wordpressUrl} target="_blank" rel="noopener noreferrer" className="text-center" style={{color:'white'}}>Lire la suite</a></Button>
+         
+            {article.image && <img src={article.image} alt={`Image de ${article.title}`} className="img-fluid image-article" />}
+            <Card.Title style={{marginLeft:'15px', marginTop:'15px'}}>{article.title}</Card.Title>
+            <Card.Text style={{marginLeft:'15px'}}>{article.content}</Card.Text>
+            <Button style={{ margin: '15px', width:'120px'}}><a href={article.wordpressUrl} target="_blank" rel="noopener noreferrer" className="text-center" style={{color:'white'}}>Lire la suite</a></Button>
             <Card.Footer className="text-muted">
               {article.date}
             </Card.Footer>
-         </Card.Body>
+           
           </Card>
         </Col>
       ))}

@@ -9,11 +9,6 @@ body {
  
   
 }
-.AppContainer {
-  background-color: #444;
-  padding-left: 150px;
-  padding-right: 150px;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -62,10 +57,27 @@ a {
   margin-bottom: 50px;
 }
 
+.underline-title {
+  margin-top: 10px; /* Ajouter une marge supérieure de 10px */
+  border-bottom: 4px solid blue; /* Épaisseur et couleur du soulignement */
+  width: 23%; /* Définir la longueur du soulignement à 80% de la largeur du conteneur */
+  padding-bottom: 5px; /* Ajouter une marge entre le soulignement et le texte */
+}
 
+.container-background h2 {
+  margin-bottom: 2px; /* Ajouter une marge inférieure au titre h1 */
+}
 .image-article {
   width: 100%;
   height: auto; 
+}
+
+.icon-hover {
+  transition: transform 0.3s ease-in-out; /* Transition fluide pour l'effet de survol */
+}
+
+.icon-hover:hover {
+  transform: scale(1.5); /* Agrandissement de l'icône au survol */
 }
 
 .mb-4 {
@@ -78,8 +90,17 @@ a {
 .contact-page {
   background-image: url('/public/images/contact-bg.jpg');
 }
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1); /* Couleur semi-transparente de l'overlay */
+  z-index: -1;
+}
 footer {
-  background-color: #EEE  ;
+  
   padding-top: 50px;
 }
 

@@ -31,9 +31,9 @@ function PortfolioPage() {
   ]);
 
   return (
-    <Container className="py-5 container-background" style={{ backgroundColor:'white'}}>
-      <h1 className="text-center mb-4">PORTFOLIO</h1>
-      <p className="text-center" style={{ borderBottom: '2px solid blue center', }}>Voici quelques-unes de mes réalisations</p>
+    <Container className="py-4 container-background" style={{ backgroundColor:'white'}}>
+      <h2 className="text-center mb-4 ">PORTFOLIO</h2>
+      <p className="text-center mb-4 underline-title" >Voici quelques-unes de mes réalisations</p>
       
       <Row className="justify-content-md-center">
         {projects.map((project, index) => (

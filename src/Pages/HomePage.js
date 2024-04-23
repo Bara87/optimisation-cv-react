@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, ProgressBar, Button } from 'react-bootstrap';
+import GithubProfile from "./Pages/GithubProfile";
 
 function HomePage() {
   return (
@@ -17,15 +18,22 @@ function HomePage() {
           </Row>
         </Container>
       </div>
+      {/* Intégration du composant GithubProfile */}
+      <div className="github-profile-container">
+        <GithubProfile />
+      </div>
     </div>
   );
 }
 
 function BackgroundImage() {
   return (
-    <div className="background-image d-flex align-items-center justify-content-center">
-      <div className="overlay"></div>
-      <Container className="text-center" style={{ color: 'white' }}>
+    <div className="background-image position-relative d-flex align-items-center justify-content-center">
+     
+      <div className="overlay position-absolute top-0 start-0 w-100 h-100" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}></div>
+      
+      {/* Contenu principal */}
+      <Container className="text-center" style={{ color: 'white', position: 'relative', zIndex: 1 }}>
         <h1 style={{ color: 'white' }}>Bonjour, je suis John Doe</h1>
         <h2 style={{ color: 'white' }}>Développeur web full stack</h2>
         <Button variant="primary" style={{ marginTop: '20px' }}>En savoir plus</Button>
