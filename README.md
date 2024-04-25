@@ -1,21 +1,31 @@
+## Récupération du dépot
+- Ouvrez votre terminal.
+- Utilisez la commande suivante pour cloner le dépôt vers votre machine locale :
+  
+  ```
+  git clone https://github.com/Bara87/optimisation-cv-react
+  
+  ```
+
 ## Prérequis
 
 - **Node.js et npm** : Assurez-vous d'avoir Node.js installé sur votre système. Node.js inclut npm (Node Package Manager), qui est nécessaire pour installer et gérer les dépendances du projet.
 
 ## Versions recommandées
 
-- **Node.js** : Utilisez une version LTS (Long-Term Support) stable de Node.js, par exemple, la version 14.x ou la version 16.x. Vous pouvez télécharger Node.js à partir de son site officiel : [nodejs.org](https://nodejs.org/).
+- **Node.js** : Utilisez la version 21.2.0 Vous pouvez télécharger Node.js à partir de son site officiel : [nodejs.org](https://nodejs.org/).
 - **npm** : npm est généralement installé avec Node.js et sera automatiquement mis à jour avec une version compatible lors de l'installation de Node.js.
 
 ## Installation du projet
 
 1. **Création du projet React** :
    - Ouvrez votre terminal.
-   - Utilisez la commande suivante pour créer un nouveau projet React avec Create React App (CRA) :
+   - Installez React et ReactDOM :
+     
      ```
-     npx create-react-app nom-du-projet
+     npm install react react-dom
      ```
-     Remplacez `nom-du-projet` par le nom que vous souhaitez donner à votre projet.
+     
 
 2. **Installation de Bootstrap** :
    - Changez de répertoire pour accéder au projet que vous venez de créer :
